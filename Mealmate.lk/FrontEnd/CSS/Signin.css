@@ -1,0 +1,159 @@
+
+body {
+  background: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+.navbar {
+  background: #eeeeee;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 65px;
+  width: auto;
+  max-width: 300px;
+  }
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.05rem;
+  padding: 0 8px;
+}
+
+.nav-links a:hover{
+  text-decoration: underline;
+  color: #e43a2e;
+}
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn.signup:hover{
+  background-color: rgba(229, 57, 53, 0.66);
+  transition: background-color 0.3s ease;
+}
+
+.btn {
+  padding: 0.5rem 1.3rem;
+  border: 2.5px solid #e43a2e;
+  border-radius: 16px;
+  color: #e43a2e;
+  background:white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn.signup {
+  background: #e43a2e;
+  color: white;
+  border: none;
+}
+/* Centered Login Card */
+.card {
+  max-width: 400px;
+  margin: 70px auto 0 auto;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 16px 4px #e5e5e5;
+  padding: 40px 25px 32px 25px;
+  text-align: center;
+}
+.card h2 {
+  color: #e74c3c;
+  display: inline;
+  margin-right: 2px;
+  font-size: 2rem;
+}
+span {
+  display: inline;
+  color: #111;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.input-group {
+  margin-top: 22px;
+  text-align: left;
+}
+.input-group label {
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 500;
+}
+.input-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 2px solid #e2e2e2;
+  border-radius: 12px;
+  font-size: 17px;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 4px;
+  transition: border 0.2s;
+}
+.input-group input:focus {
+  border: 2px solid #e74c3c;
+}
+.input-group .password-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input-group .toggle-visibility {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  cursor: pointer;
+  font-size: 19px;
+  color: #999;
+  background: none;
+  border: none;
+}
+.links-row {
+display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 28px;
+  font-size: 16px;
+}
+.links-row a {
+  color: #222;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links-row a:hover{
+  color: rgb(31, 44, 231);
+}
+.card button[type="submit"] {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 35px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 1px 3px 11px #09090954;
+}
+.card button[type="submit"]:hover {
+  background: #e07663;
+  transition: background-color 0.3s ease;
+}
+ 

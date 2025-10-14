@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealmate.lk</title>
+    <link rel="stylesheet" href="../CSS/desserthub.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="meal">Meal</span><span class="mate">mate</span>.lk
+        </div>
+        <nav class="nav">
+            <a href="#" onclick="showAlert('Home')">Home</a>
+            <a href="#" onclick="showAlert('Orders')">Orders</a>
+            <a href="#" onclick="showAlert('Offers')">Offers</a>
+        </nav>
+        <div class="nav-icons">
+            <svg class="icon" onclick="showAlert('Search')" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <svg class="icon" onclick="showAlert('Wishlist')" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <svg class="icon" onclick="showAlert('Cart')" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <svg class="icon" onclick="showAlert('Profile')" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="restaurant-card">
+            <div class="restaurant-image"></div>
+            <h2 class="restaurant-name">Dessert Hub</h2>
+            <div class="restaurant-address">
+                No. 21, Mihinthale Junction,<br>
+                Opp. Ananda College City,<br>
+                Anuradhapura.<br>
+                077-8969556
+            </div>
+            <div class="restaurant-hours">Open at 8.30 AM - 10.00 PM</div>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/download.jfif" alt="Paniwalau">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Paniwalau</div>
+                    <div class="product-price">RS.200.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Paniwalau')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Paniwalau')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/images (1).jfif" alt="Cup Cake">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Cup Cake</div>
+                    <div class="product-price">RS.400.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Cup Cake')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Cup Cake')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/dodol.jfif" alt="Dhodhol">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Dhodhol</div>
+                    <div class="product-price">RS.550.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Dhodhol')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Dhodhol')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/watapallam.jfif" alt="Watalappam">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Watalappam</div>
+                    <div class="product-price">RS.650.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Watalappam')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Watalappam')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/rulan aluwa.jfif" alt="Rula Aluwa">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Rula Aluwa</div>
+                    <div class="product-price">RS.800.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Rula Aluwa')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Rula Aluwa')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../IMAGES/choco.jfif" alt="Chocolate Brownie">
+                </div>
+                <div class="product-details">
+                    <div class="product-name">Chocolate Brownie</div>
+                    <div class="product-price">RS.950.00</div>
+                    <div class="product-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-add" onclick="addToCart('Chocolate Brownie')">Add to Cart</button>
+                            <button class="btn btn-buy" onclick="buyNow('Chocolate Brownie')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JAVASCRIPT/dessertHub.js"></script>
+</body>
+</html>

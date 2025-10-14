@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MealMate.lk Signup</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-brand">
+            <img src="../IMAGES/rectangle1.png" alt="Mealmate.lk Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About us</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn">Log in</button>
+            <button class="btn signup">Sign up</button>
+        </div>
+    </div>
+    <!-- Signup Form -->
+    <div class="center-form">
+        <h2>Get <span>Started</span></h2>
+        <form id="signupForm">
+          <div class="input_group">
+            <div class="form-group">
+                <label for="phone">Phone Number or Email</label>
+                <input type="text" id="emailPhone" name="phone" required>
+            </div>
+            <div class="form-group password-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+            </div>
+            <div class="form-group password-row">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirm" required>
+               
+            </div>
+          </div>
+            
+            <button type="submit" class="continue-btn">Continue</button>
+        </form>
+        <div class="divider"><span>or</span></div>
+        <div class="oauth-buttons">
+            <button class="oauth-btn google-icon">
+                 <img src="../IMAGES/icons8-google.svg" alt="Google">
+            </button>
+            <button class="oauth-btn apple-icon">
+                 <img src="../IMAGES/icons8-apple-logo.svg" alt="Apple">
+            </button>
+        </div>
+    </div>
+  
+
+    <script src="../JAVASCRIPT/SingUpScript.js"></script>
+</body>
+</html>

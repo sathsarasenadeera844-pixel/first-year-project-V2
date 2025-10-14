@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Mealmate</title>
+    <link rel="stylesheet" href="../CSS/Resturent_Orders.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-meal">Meal</span><span class="logo-mate">mate</span><span class="logo-lk">.lk</span>
+        </div>
+        <button class="btn-logout">Log out</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Restaurant Card -->
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="Restaurant Food">
+            </div>
+            
+            <div class="restaurant-info">
+                <p class="address">No. 21, Mihintale Junction,<br>
+                Opp. Cargills Food City,<br>
+                Anuradhapura.</p>
+                
+                <p class="phone">077-8969556</p>
+                
+                <p class="hours">Open at 8.00am - 10.00pm</p>
+                
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary">Menu</button>
+                <button class="btn btn-secondary">Orders</button>
+                <button class="btn btn-primary">Order History</button>
+                <button class="btn btn-primary">Wallet</button>
+                <button class="btn btn-primary">Profile</button>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div class="orders-section">
+            <h2 class="orders-title">Orders</h2>
+            
+            <div class="orders-container" id="ordersContainer">
+                <!-- Sample Order -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-id-section">
+                            <span class="order-label">Order ID</span>
+                            <span class="order-id"># 1234</span>
+                        </div>
+                        <div class="order-items-section">
+                            <span class="order-label">Items</span>
+                            <div class="order-items">
+                                <div class="item">Egg Biriyani <span class="quantity">✕ 1</span></div>
+                                <div class="item">Chicken Biriyani <span class="quantity">✕ 2</span></div>
+                            </div>
+                        </div>
+                        <div class="order-price-section">
+                            <span class="order-label">Price</span>
+                            <span class="order-price">Rs. 1500.00</span>
+                        </div>
+                        <div class="order-status-section">
+                            <button class="status-badge status-prepared">Prepared</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../JAVASCRIPT/Resturent_menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMate.lk - Restaurant Registration</title>
+    <link rel="stylesheet" href="../CSS/ShopOwnerRegistration.css"
+</head>
+<body>
+   
+    <header class="header">
+        <div class="logo">
+            <span class="meal">Meal</span><span class="mate">mate</span><span class="chef-hat">👨‍🍳</span><span style="color: #666;">.lk</span>
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About us</a>
+            <button class="login-btn">Log in</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1>As a shop owner (Restaurant)</h1>
+            <p>Let your restaurant be part of our fast delivery network.</p>
+        </div>
+
+        <div class="form-container">
+            <div class="success-message" id="successMessage">
+                🎉 Registration submitted successfully! We'll contact you soon.
+            </div>
+
+            <form id="restaurantForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="restaurantName">Restaurant Name:</label>
+                        <input type="text" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="restaurantAddress">Restaurant location / Address:</label>
+                        <div class="input-icon location">
+                            <input type="text" id="restaurantAddress" name="restaurantAddress" placeholder="Enter full address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownerName">Owner / Manager Name:</label>
+                        <input type="text" id="ownerName" name="ownerName" placeholder="Enter owner/manager name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="operatingHours">Operating Hours:</label>
+                        <input type="text" id="operatingHours" name="operatingHours" placeholder="e.g., Mon-Sun: 9:00 AM - 10:00 PM" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownerContact">Owner / Manager Contact:</label>
+                        <div class="input-icon phone">
+                            <input type="tel" id="ownerContact" name="ownerContact" placeholder="Enter contact number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankDetails">Bank Details:</label>
+                        <textarea id="bankDetails" name="bankDetails" placeholder="Enter bank name, account number, and other relevant details" required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">Register Restaurant</button>
+            </form>
+        </div>
+    </div>
+
+   <script src="../JAVASCRIPT/ShopOwnerRegistration.js"></script>
+</body>
+</html>

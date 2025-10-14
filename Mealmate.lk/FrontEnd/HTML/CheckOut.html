@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealmate.lk - Order Successful</title>
+    <link rel="stylesheet" href="../CSS/CheckOuts.css">
+</head>
+<body>
+    
+
+    
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Success Modal/Card -->
+            <div class="success-overlay" id="successOverlay">
+                <div class="success-modal" id="successModal">
+                    
+                    <!-- Success Icon -->
+                    <div class="success-icon">
+                        <div class="check-circle">
+                            <svg class="checkmark" viewBox="0 0 24 24">
+                                <path fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Content -->
+                    <div class="success-content">
+                        <h1 class="success-title">Success!</h1>
+                        <p class="success-message">
+                            Your payment was successful<br>
+                            A receipt for this purchase has been<br>
+                            sent to your email.
+                        </p>
+                    </div>
+                    
+                    <!-- Action Button -->
+                    <button class="go-back-btn" onclick="goBack()">Go Back</button>
+                    
+                </div>
+            </div>
+            
+            <!-- Background Content (blurred) -->
+            <div class="background-content">
+                <div class="placeholder-content">
+                    <h2>Your Order is Being Prepared!</h2>
+                    <p>Thank you for choosing Mealmate.lk</p>
+                    <div class="order-details">
+                        <div class="detail-item">
+                            <span>Order ID:</span>
+                            <span>#ML2025001</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Estimated Delivery:</span>
+                            <span>25-35 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Total Amount:</span>
+                            <span>Rs.1000.00</span>
+                        </div>
+
+                        <button class="ok-redirect-btn" onclick="goHome()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="../JAVASCRIPT/CheckOuts.js"></script> 
+</body>
+</html>

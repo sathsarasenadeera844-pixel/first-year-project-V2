@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Menu - Mealmate</title>
+    <link rel="stylesheet" href="../CSS/AddItems.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-meal">Meal</span><span class="logo-mate">mate</span><span class="logo-lk">.lk</span>
+        </div>
+        <button class="btn-logout">Log out</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="form-card">
+            <!-- Image Upload Section -->
+            <div class="image-upload-section">
+                <div class="image-upload-box" id="imageUploadBox">
+                    <p class="upload-text">Add Image</p>
+                    <div class="plus-icon">⊕</div>
+                    <img id="previewImage" class="preview-image" style="display: none;" alt="Preview">
+                </div>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            </div>
+
+            <!-- Form Fields -->
+            <form id="menuForm">
+                <div class="form-group">
+                    <input type="text" id="titleInput" class="form-input" placeholder="Add a Title" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="priceInput" class="form-input" placeholder="Add a Price" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Add to Menu</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../JAVASCRIPT/addItems.js"></script>
+</body>
+</html>

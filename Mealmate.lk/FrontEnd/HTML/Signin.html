@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mealmate.lk Login</title>
+  <link rel="stylesheet" href="../CSS/Signin.css">
+  
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-brand">
+            <img src="../IMAGES/rectangle1.png" alt="Mealmate.lk Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About us</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn">Log in</button>
+            <button class="btn signup">Sign up</button>
+        </div>
+    </div>
+  <!-- LOGIN CARD -->
+  <form class="card" autocomplete="off">
+    <div>
+      <h2>Welcome</h2><span> Back</span>
+    </div>
+    <div class="input-group">
+      <label for="username">Phone Number or Email</label>
+      <input type="text" id="username" name="username" required autocomplete="username">
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <div class="password-row">
+        <input type="password" id="password" name="password" required autocomplete="current-password">
+        <button type="button" class="toggle-visibility" tabindex="-1" onclick="togglePassword()">
+          
+        </button>
+      </div>
+    </div>
+    <div class="links-row">
+      <a href="#">Create New Account</a>
+      <a href="#">Forgot password</a>
+    </div>
+    <button type="submit">Continue</button>
+  </form>
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById('password');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+      } else {
+        pwd.type = 'password';
+      }
+    }
+  </script>
+</body>
+</html>

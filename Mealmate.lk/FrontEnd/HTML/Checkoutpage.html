@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealmate.lk - Checkout</title>
+    <link rel="stylesheet" href="/Mealmate.lk/FrontEnd/CSS/Checkout.css">
+</head>
+<body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="meal">Meal</span><span class="mate">mate</span><span class="lk">.lk</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for restaurants or dishes...">
+                <button type="submit">🔍</button>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" onclick="showNotification('Home clicked')">Home</a>
+                <a href="#" onclick="showNotification('Orders clicked')">Orders</a>
+                <a href="#" onclick="showNotification('Offers clicked')">Offers</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="icon-btn favorites" onclick="showNotification('Favorites clicked')">❤️</button>
+                <button class="icon-btn cart" onclick="showNotification('Cart clicked')">🛒</button>
+                <button class="icon-btn profile" onclick="showNotification('Profile clicked')">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Checkout</h1>
+            
+            <div class="checkout-container">
+                
+                <div class="checkout-forms">
+                    
+                    <!-- Personal Information Section -->
+                    <section class="form-section">
+                        <h2>Personal information:</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName1">First Name</label>
+                                <input type="text" id="firstName1" name="firstName1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName2">Middle Name</label>
+                                <input type="text" id="firstName2" name="firstName2" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName1">Last Name</label>
+                                <input type="text" id="lastName1" name="lastName1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Email">Email Address</label>
+                                <input type="text" id="lastName1" name="lastName1" required>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Delivery Details Section -->
+                    <section class="form-section">
+                        <h2>Delivery details:</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="addressLine1">Address Line 1</label>
+                                <input type="text" id="addressLine1" name="addressLine1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine2">Address Line 2</label>
+                                <input type="text" id="addressLine2" name="addressLine2">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="addressLine3">Address Line 3</label>
+                                <input type="text" id="addressLine3" name="addressLine3">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="tel" id="contactNumber" name="contactNumber" required>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Section -->
+                    <section class="form-section">
+                        <h2>Payment:</h2>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-option">
+                                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                <label for="paypal" class="payment-label">
+                                    <span>Pay Pal</span>
+                                    <img src="../IMAGES/paypal.jpg" alt="PayPal" class="payment-logo">
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                <label for="creditCard" class="payment-label">
+                                    <span>Credit Card or Debit Card</span>
+                                    <div class="card-logos">
+                                        <span class="card-logo mastercard"></span>
+                                        <span class="card-logo visa">VISA</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-details" id="cardDetails">
+                            <div class="card-row">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expiryDate">Expire Date</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV Code</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Side - Order Summary -->
+                <div class="order-summary">
+                    <h2>Your order:</h2>
+                    
+                    <div class="order-details">
+                        <div class="order-row">
+                            <span>Subtotal:</span>
+                            <span>Rs.1000.00</span>
+                        </div>
+                        <div class="order-row">
+                            <span>Delivery:</span>
+                            <span>Rs.250.00</span>
+                        </div>
+                        <div class="order-row promo-row">
+                            <span>Promo Code:</span>
+                            <div class="promo-input-group">
+                                <input type="text" id="promoCodeInput" placeholder="Enter Code">
+                                <button class="promo-apply-btn" onclick="showNotification('Promo Code Applied!')">Apply</button>
+                            </div>
+                        </div>
+                        <div class="order-row">
+                            <span>Discount:</span>
+                            <span class="discount">Rs.250.00</span>
+                        </div>
+                        <hr>
+                        <div class="order-row total">
+                            <span><strong>Total:</strong></span>
+                            <span><strong>Rs.1000.00</strong></span>
+                        </div>
+                    </div>
+
+                    <button class="buy-now-btn" onclick="processPurchase()">BUY NOW</button>
+
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="../IMAGES/Vegetable Soup.png" alt="Vegetable Soup">
+                            <div class="item-info">
+                                <h3>Vegetable Soup</h3>
+                                <p>RS.800.00</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('item1', -1)">−</button>
+                                <span class="quantity" id="qty-item1">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('item1', 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeItem('item1')">✕</button>
+                        </div>
+
+                        <div class="cart-item">
+                            <img src="../IMAGES/Seafood Rice.png" alt="Sea Food Rice">
+                            <div class="item-info">
+                                <h3>Seafood Rice</h3>
+                                <p>RS.1000.00</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('item2', -1)">−</button>
+                                <span class="quantity" id="qty-item2">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('item2', 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeItem('item2')">✕</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Meal mate</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">📘</a>
+                        <a href="#" class="social-icon instagram">📷</a>
+                        <a href="#" class="social-icon twitter">🐦</a>
+                        <a href="#" class="social-icon whatsapp">📱</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#">Terms of use</a>
+                    <span class="separator">|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2025</p>
+            </div>
+        </div>
+    </footer>
+<script src="../JAVASCRIPT/CheckOutspage.js"></script>
+</body>
+</html>
