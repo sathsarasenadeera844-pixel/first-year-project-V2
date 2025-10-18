@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mealmate.lk - Checkout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="/Mealmate.lk/FrontEnd/CSS/Checkout.css">
 </head>
 <body>
-    <!-- ========== HEADER SECTION ========== -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <span class="meal">Meal</span><span class="mate">mate</span><span class="lk">.lk</span>
-            </div>
+   
+   <header class="navbar">
+        <div class="logo">
+            <img src="/Mealmate.lk/FrontEnd/IMAGES/Logo.png" alt="logo" class="main-logo">
             
-            <div class="search-bar">
-                <input type="text" placeholder="Search for restaurants or dishes...">
-                <button type="submit">🔍</button>
-            </div>
-            
-            <nav class="nav-links">
-                <a href="#" onclick="showNotification('Home clicked')">Home</a>
-                <a href="#" onclick="showNotification('Orders clicked')">Orders</a>
-                <a href="#" onclick="showNotification('Offers clicked')">Offers</a>
-            </nav>
-            
-            <div class="header-actions">
-                <button class="icon-btn favorites" onclick="showNotification('Favorites clicked')">❤️</button>
-                <button class="icon-btn cart" onclick="showNotification('Cart clicked')">🛒</button>
-                <button class="icon-btn profile" onclick="showNotification('Profile clicked')">👤</button>
-            </div>
         </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Orders</a>
+            <a href="#">Offers</a>
+
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </a>
+
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </a>
+            
+           
+        </nav>
     </header>
 
     <main class="main-content">
