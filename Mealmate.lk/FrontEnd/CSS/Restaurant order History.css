@@ -1,0 +1,607 @@
+/* ========================================
+   MEALMATE.LK - ORDER HISTORY
+   CSS STYLESHEET
+   ======================================== */
+
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========== CONTAINER LAYOUT ========== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== HEADER SECTION ========== */
+.header {
+    background: #e8e9ea;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ----- Logo Styling ----- */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chef-icon {
+    font-size: 24px;
+}
+
+.logo .meal {
+    color: #ff6b35;
+}
+
+.logo .mate {
+    color: #4caf50;
+}
+
+.logo .lk {
+    color: #2196f3;
+}
+
+/* ----- Search Bar ----- */
+.search-bar {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    background: white;
+}
+
+.search-bar input:focus {
+    border-color: #ff6b35;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff6b35;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+/* ----- Navigation Links ----- */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff6b35;
+}
+
+/* ----- Header Actions ----- */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 107, 53, 0.1);
+}
+
+/* ========== MAIN CONTENT SECTION ========== */
+.main-content {
+    padding: 30px 0;
+}
+
+.history-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ========== LEFT SIDEBAR ========== */
+.sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e74c3c;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* ----- Restaurant Image ----- */
+.restaurant-image {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.placeholder-icon {
+    font-size: 40px;
+}
+
+/* ----- Restaurant Information ----- */
+.restaurant-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.restaurant-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.restaurant-location,
+.restaurant-phone,
+.restaurant-hours {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.restaurant-hours {
+    margin-bottom: 8px;
+}
+
+/* ----- Sidebar Menu ----- */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+.menu-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.menu-btn:hover {
+    background: #c0392b;
+    transform: translateX(5px);
+}
+
+.menu-btn.active {
+    background: white;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.menu-btn.profile-btn {
+    background: white;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.menu-btn.profile-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* ========== RIGHT CONTENT SECTION ========== */
+.main-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    min-height: 500px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ========== ORDER HISTORY TABLE ========== */
+.history-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ----- Table Header ----- */
+.table-header {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px 150px;
+    gap: 20px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+.header-cell {
+    display: flex;
+    align-items: center;
+}
+
+/* ----- History Rows ----- */
+.history-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px 150px;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s;
+    align-items: center;
+}
+
+.history-row:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.history-row:last-child {
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/* ----- Order ID Cell ----- */
+.cell.order-id {
+    display: flex;
+    align-items: center;
+}
+
+.order-number {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+/* ----- Items Cell ----- */
+.cell.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.item-quantity {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ----- Price Cell ----- */
+.cell.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price-amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ----- Date Cell ----- */
+.cell.date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.date-text {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+    .history-container {
+        grid-template-columns: 220px 1fr;
+        gap: 20px;
+    }
+
+    .table-header,
+    .history-row {
+        grid-template-columns: 100px 1fr 130px 130px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        max-width: none;
+    }
+
+    .history-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .history-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .history-row:hover {
+        transform: none;
+    }
+
+    .cell {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 5px;
+    }
+
+    .cell::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #666;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .cell.order-id::before {
+        content: "Order ID";
+    }
+
+    .cell.items::before {
+        content: "Items";
+    }
+
+    .cell.price::before {
+        content: "Price";
+    }
+
+    .cell.date::before {
+        content: "Date";
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .main-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .restaurant-info {
+        padding: 12px;
+    }
+
+    .sidebar-menu {
+        padding: 12px;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.restaurant-card,
+.main-section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.history-row {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ========== EMPTY STATE ========== */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.empty-state-text {
+    font-size: 18px;
+    color: #666;
+}
+
+/* ========== FILTER SECTION ========== */
+.filter-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.filter-btn.active {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* ========== DATE RANGE PICKER ========== */
+.date-range {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date-input {
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.date-input:focus {
+    border-color: #e74c3c;
+}
+
+/* ========== EXPORT BUTTON ========== */
+.export-btn {
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+    margin-left: auto;
+}
+
+.export-btn:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealmate.lk - Order History</title>
+    <link rel="stylesheet" href="Restaurant order History.css">
+</head>
+<body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="chef-icon">👨‍🍳</span>
+                <span class="meal">Meal</span><span class="mate">mate</span><span class="lk">.lk</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for restaurants or dishes...">
+                <button type="submit">🔍</button>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" onclick="navigateTo('home')">Home</a>
+                <a href="#" onclick="navigateTo('orders')">Oders</a>
+                <a href="#" onclick="navigateTo('offers')">Offers</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="icon-btn favorites" onclick="showNotification('Favorites clicked')">❤️</button>
+                <button class="icon-btn cart" onclick="showNotification('Cart clicked')">🛒</button>
+                <button class="icon-btn profile" onclick="showNotification('Profile clicked')">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT SECTION ========== -->
+    <main class="main-content">
+        <div class="container">
+            <div class="history-container">
+                
+                <!-- ========== LEFT SIDEBAR - Restaurant Info ========== -->
+                <aside class="sidebar">
+                    <div class="restaurant-card">
+                        <!-- Restaurant Image Placeholder -->
+                        <div class="restaurant-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🏪</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Restaurant Information -->
+                        <div class="restaurant-info">
+                            <h2 class="restaurant-name">No. 21, Mihintale Junction,</h2>
+                            <p class="restaurant-location">Opp. Cargills Food City,</p>
+                            <p class="restaurant-location">Anuradhapura.</p>
+                            <p class="restaurant-phone">077-8969556</p>
+                            <p class="restaurant-hours">Open at 8.00am - 10.00pm</p>
+                        </div>
+                        
+                        <!-- Navigation Menu -->
+                        <nav class="sidebar-menu">
+                            <button class="menu-btn" onclick="switchTab('menu')">Menu</button>
+                            <button class="menu-btn" onclick="switchTab('orders')">Orders</button>
+                            <button class="menu-btn active" onclick="switchTab('history')">Order History</button>
+                            <button class="menu-btn" onclick="switchTab('wallet')">Wallet</button>
+                            <button class="menu-btn profile-btn" onclick="switchTab('profile')">Profile</button>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- ========== RIGHT CONTENT - Order History ========== -->
+                <section class="main-section">
+                    <h1 class="section-title">Order History</h1>
+                    
+                    <!-- Order History Table -->
+                    <div class="history-table">
+                        <div class="table-header">
+                            <div class="header-cell order-id">Order ID</div>
+                            <div class="header-cell items">Items</div>
+                            <div class="header-cell price">Price</div>
+                            <div class="header-cell date">Date</div>
+                        </div>
+                        
+                        <!-- Order Row 1 -->
+                        <div class="history-row">
+                            <div class="cell order-id">
+                                <span class="order-number"># 1234</span>
+                            </div>
+                            <div class="cell items">
+                                <div class="item-list">
+                                    <div class="item">
+                                        <span class="item-name">Chicken Biriyani</span>
+                                        <span class="item-quantity">✕ 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell price">
+                                <span class="price-amount">Rs. 800.00</span>
+                            </div>
+                            <div class="cell date">
+                                <span class="date-text">30/01/2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Row 2 -->
+                        <div class="history-row">
+                            <div class="cell order-id">
+                                <span class="order-number"># 4567</span>
+                            </div>
+                            <div class="cell items">
+                                <div class="item-list">
+                                    <div class="item">
+                                        <span class="item-name">Egg Biriyani</span>
+                                        <span class="item-quantity">✕ 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell price">
+                                <span class="price-amount">Rs. 900.00</span>
+                            </div>
+                            <div class="cell date">
+                                <span class="date-text">20/01/2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Row 3 -->
+                        <div class="history-row">
+                            <div class="cell order-id">
+                                <span class="order-number"># 3456</span>
+                            </div>
+                            <div class="cell items">
+                                <div class="item-list">
+                                    <div class="item">
+                                        <span class="item-name">Prawn Kottu</span>
+                                        <span class="item-quantity">✕ 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell price">
+                                <span class="price-amount">Rs. 2400.00</span>
+                            </div>
+                            <div class="cell date">
+                                <span class="date-text">15/01/2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Row 4 -->
+                        <div class="history-row">
+                            <div class="cell order-id">
+                                <span class="order-number"># 2345</span>
+                            </div>
+                            <div class="cell items">
+                                <div class="item-list">
+                                    <div class="item">
+                                        <span class="item-name">Mixed Fried Rice</span>
+                                        <span class="item-quantity">✕ 3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell price">
+                                <span class="price-amount">Rs. 1500.00</span>
+                            </div>
+                            <div class="cell date">
+                                <span class="date-text">10/01/2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Row 5 -->
+                        <div class="history-row">
+                            <div class="cell order-id">
+                                <span class="order-number"># 1289</span>
+                            </div>
+                            <div class="cell items">
+                                <div class="item-list">
+                                    <div class="item">
+                                        <span class="item-name">Seafood Fried Rice</span>
+                                        <span class="item-quantity">✕ 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell price">
+                                <span class="price-amount">Rs. 1200.00</span>
+                            </div>
+                            <div class="cell date">
+                                <span class="date-text">05/01/2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== JAVASCRIPT SECTION ========== -->
+    <script src="Restaurant order History.js"></script>
+</body>
+</html>
