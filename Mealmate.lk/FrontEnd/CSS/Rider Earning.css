@@ -1,0 +1,424 @@
+/* ========================================
+   MEALMATE.LK - RIDER DASHBOARD
+   CSS STYLESHEET
+   ======================================== */
+
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #e8e8e8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ========== CONTAINER LAYOUT ========== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ========== MAIN CONTENT SECTION ========== */
+.main-content {
+    min-height: 100vh;
+}
+
+/* ========== LEFT SIDEBAR ========== */
+.sidebar {
+    position: sticky;
+    top: 30px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e74c3c;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+}
+
+/* ----- Profile Avatar ----- */
+.profile-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.avatar-icon {
+    font-size: 40px;
+    color: white;
+}
+
+/* ----- Rider Information ----- */
+.rider-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rider-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.rider-phone {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ----- Sidebar Menu ----- */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 250px;
+}
+
+.menu-btn {
+    width: 100%;
+    padding: 20px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.menu-btn:hover {
+    background: #c0392b;
+    transform: translateX(5px);
+}
+
+.menu-btn.active {
+    background: #c0392b;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.menu-btn.earning-btn {
+    background: white;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.menu-btn.earning-btn:hover {
+    background: #fff5f5;
+}
+
+/* ========== RIGHT CONTENT - DASHBOARD ========== */
+.dashboard-section {
+    background: transparent;
+}
+
+/* ========== DASHBOARD HEADER ========== */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* ----- Greeting Section ----- */
+.greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-text {
+    font-size: 36px;
+    font-weight: 400;
+    color: #e74c3c;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.greeting-name {
+    font-size: 36px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 1;
+}
+
+/* ----- Today Income Section ----- */
+.today-income {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.income-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.income-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #27ae60;
+}
+
+/* ========== STATISTICS CARDS ========== */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats-row:last-child {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stat-card {
+    background: #f0f7a8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.stat-card.yellow {
+    background: #f0f7a8;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-card.large .stat-value {
+    font-size: 28px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 180px 1fr;
+        gap: 20px;
+    }
+
+    .greeting-text,
+    .greeting-name {
+        font-size: 30px;
+    }
+
+    .income-amount {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    .avatar-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avatar-icon {
+        font-size: 35px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .today-income {
+        align-items: flex-start;
+    }
+
+    .greeting-text,
+    .greeting-name {
+        font-size: 28px;
+    }
+
+    .income-amount {
+        font-size: 26px;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stats-row:last-child {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    .profile-card {
+        padding: 12px;
+    }
+
+    .avatar-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .avatar-icon {
+        font-size: 30px;
+    }
+
+    .rider-name {
+        font-size: 13px;
+    }
+
+    .rider-phone {
+        font-size: 12px;
+    }
+
+    .menu-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .greeting-text,
+    .greeting-name {
+        font-size: 24px;
+    }
+
+    .income-label {
+        font-size: 14px;
+    }
+
+    .income-amount {
+        font-size: 24px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .stat-card.large .stat-value {
+        font-size: 22px;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-card,
+.dashboard-header,
+.stat-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+    .profile-card,
+    .dashboard-header,
+    .stat-card {
+        animation: none;
+    }
+    
+    .menu-btn:hover,
+    .stat-card:hover {
+        transform: none;
+    }
+}
+
+/* ========== FOCUS STYLES ========== */
+.menu-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3);
+}
+
+/* ========== UTILITY CLASSES ========== */
+.hidden {
+    display: none;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
