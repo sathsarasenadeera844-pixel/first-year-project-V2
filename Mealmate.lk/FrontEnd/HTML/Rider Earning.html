@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealmate.lk - Rider Dashboard</title>
+    <link rel="stylesheet" href="Rider Earning.css">
+</head>
+<body>
+    <!-- ========== MAIN CONTENT SECTION ========== -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- ========== LEFT SIDEBAR - Rider Profile ========== -->
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <!-- Profile Avatar -->
+                    <div class="profile-avatar">
+                        <div class="avatar-circle">
+                            <span class="avatar-icon">👤</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rider Information -->
+                    <div class="rider-info">
+                        <h3 class="rider-name">Mr.Dinesh Harshana</h3>
+                        <p class="rider-phone">074-6598201</p>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <nav class="sidebar-menu">
+                        <button class="menu-btn active" onclick="switchTab('orders')">Orders</button>
+                        <button class="menu-btn earning-btn" onclick="switchTab('earning')">Earning</button>
+                        <button class="menu-btn" onclick="switchTab('profile')">Profile</button>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- ========== RIGHT CONTENT - Dashboard Stats ========== -->
+            <section class="dashboard-section">
+                
+                <!-- Header Section -->
+                <div class="dashboard-header">
+                    <div class="greeting">
+                        <h1 class="greeting-text">Hello,</h1>
+                        <h2 class="greeting-name">Dinesh.</h2>
+                    </div>
+                    <div class="today-income">
+                        <span class="income-label">Today Income</span>
+                        <span class="income-amount">Rs.15000.00</span>
+                    </div>
+                </div>
+                
+                <!-- Statistics Cards Row 1 -->
+                <div class="stats-row">
+                    <div class="stat-card yellow">
+                        <div class="stat-label">Today Total Orders</div>
+                        <div class="stat-value">20</div>
+                    </div>
+                    <div class="stat-card yellow">
+                        <div class="stat-label">Today Completed Orders</div>
+                        <div class="stat-value">15</div>
+                    </div>
+                    <div class="stat-card yellow">
+                        <div class="stat-label">Last Month CompletedOrders</div>
+                        <div class="stat-value">20</div>
+                    </div>
+                </div>
+                
+                <!-- Statistics Cards Row 2 -->
+                <div class="stats-row">
+                    <div class="stat-card yellow large">
+                        <div class="stat-label">This Month Income</div>
+                        <div class="stat-value">Rs.15000.00</div>
+                    </div>
+                    <div class="stat-card yellow large">
+                        <div class="stat-label">This Last Month Income</div>
+                        <div class="stat-value">Rs.12000.00</div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- ========== JAVASCRIPT SECTION ========== -->
+    <script src="Rider Earning.js"></script>
+</body>
+</html>
