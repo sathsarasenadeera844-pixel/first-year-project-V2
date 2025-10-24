@@ -1,0 +1,251 @@
+/* ========================================
+   MEALMATE.LK - CLEAN MAP PAGE
+   CSS STYLESHEET
+   ======================================== */
+
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== CONTAINER LAYOUT ========== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ========== MAIN CONTENT SECTION ========== */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 40px;
+}
+
+/* ========== MAP TITLE ========== */
+.map-title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+/* ========== MAP CONTAINER ========== */
+.map-container {
+    width: 100%;
+    height: 350px;
+    background: #ffffff;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+/* ----- Map Placeholder ----- */
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+}
+
+.map-icon {
+    font-size: 80px;
+    opacity: 0.2;
+}
+
+/* ========== SEPARATOR LINE ========== */
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* ========== BUTTON CONTAINER ========== */
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-btn {
+    padding: 12px 40px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(231, 76, 60, 0.2);
+    min-width: 130px;
+}
+
+.back-btn:hover {
+    background: #d43f2f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.2);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-content {
+        padding: 40px 0 30px;
+    }
+
+    .map-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .map-icon {
+        font-size: 60px;
+    }
+
+    .separator-line {
+        margin-bottom: 25px;
+    }
+
+    .back-btn {
+        padding: 11px 35px;
+        font-size: 15px;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 30px 0 20px;
+    }
+
+    .map-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .map-icon {
+        font-size: 50px;
+    }
+
+    .separator-line {
+        margin-bottom: 20px;
+    }
+
+    .back-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+        min-width: 110px;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.map-title {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.map-container {
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+}
+
+.button-container {
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+/* ========== FOCUS STYLES ========== */
+.back-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3);
+}
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+    .map-title,
+    .map-container,
+    .button-container {
+        animation: none;
+    }
+    
+    .back-btn:hover {
+        transform: none;
+    }
+}
+
+/* ========== HIGH CONTRAST MODE ========== */
+@media (prefers-contrast: high) {
+    .map-container {
+        border: 2px solid #000;
+    }
+    
+    .separator-line {
+        background: #000;
+        height: 2px;
+    }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+    .back-btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .map-container {
+        border: 1px solid #000;
+    }
+}
