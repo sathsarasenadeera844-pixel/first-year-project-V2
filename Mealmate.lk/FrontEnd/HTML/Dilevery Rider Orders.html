@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMate.lk - Rider Dashboard</title>
+    <link rel="stylesheet" href="Dilevery Rider Orders.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-meal">Meal</span><span class="logo-mate">mate</span><span class="logo-lk">.lk</span>
+        </div>
+        <button class="logout-btn">Log out</button>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="avatar">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="40" fill="#4A90E2"/>
+                        <path d="M40 35C44.4183 35 48 31.4183 48 27C48 22.5817 44.4183 19 40 19C35.5817 19 32 22.5817 32 27C32 31.4183 35.5817 35 40 35Z" fill="white"/>
+                        <path d="M40 40C31.7157 40 25 46.7157 25 55V61H55V55C55 46.7157 48.2843 40 40 40Z" fill="white"/>
+                    </svg>
+                </div>
+                <h3>Mr.Dinesh Harshana</h3>
+                <p class="phone">074-6598201</p>
+            </div>
+
+            <nav class="nav-buttons">
+                <button class="nav-btn active">Orders</button>
+                <button class="nav-btn">Earning</button>
+                <button class="nav-btn">Profile</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="orders-section">
+                <h2>Orders.</h2>
+                <div class="orders-grid">
+                    <div class="order-card">
+                        <p class="order-id">#0002</p>
+                        <p class="order-detail">Resturent - Biriyani Hub</p>
+                        <p class="order-detail">Coustomer : Heshan</p>
+                        <p class="order-detail">Earning : Rs.250.00</p>
+                        <button class="accept-btn">Accept</button>
+                    </div>
+
+                    <div class="order-card">
+                        <p class="order-id">#0020</p>
+                        <p class="order-detail">Resturent - Mr.Rice Grand</p>
+                        <p class="order-detail">Coustomer : keshan</p>
+                        <p class="order-detail">Earning : Rs.300.00</p>
+                        <button class="accept-btn">Accept</button>
+                    </div>
+
+                    <div class="order-card">
+                        <p class="order-id">#0103</p>
+                        <p class="order-detail">Resturent - Biriyani Hub</p>
+                        <p class="order-detail">Coustomer : Kaveen</p>
+                        <p class="order-detail">Earning : Rs.1250.00</p>
+                        <button class="accept-btn">Accept</button>
+                    </div>
+
+                    <div class="order-card">
+                        <p class="order-id">#0024</p>
+                        <p class="order-detail">Resturent - Mr.Rice Grand</p>
+                        <p class="order-detail">Coustomer : Jeewan</p>
+                        <p class="order-detail">Earning : Rs.1000.00</p>
+                        <button class="accept-btn">Accept</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="accepted-orders">
+                <h2>Accept Orders.</h2>
+                <div class="accepted-order">
+                    <span class="accepted-id">#0001</span>
+                    <div class="action-buttons">
+                        <button class="action-btn pickup-btn">Pick Up</button>
+                        <button class="action-btn dropoff-btn">Drop Off</button>
+                        <button class="action-btn cancel-btn">Cancel Order</button>
+                    </div>
+                </div>
+
+                <div class="accepted-order">
+                    <span class="accepted-id">#0011</span>
+                    <div class="action-buttons">
+                        <button class="action-btn pickup-btn">Pick Up</button>
+                        <button class="action-btn dropoff-btn">Drop Off</button>
+                        <button class="action-btn cancel-btn">Cancel Order</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="Dilevery Rider Orders.js"></script>
+</body>
+</html>
